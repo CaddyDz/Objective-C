@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
+#include <stdbool.h>
 
 int main(int argc, const char * argv[]) {
     
@@ -14,11 +15,10 @@ int main(int argc, const char * argv[]) {
         printf("You're in High School\n");
     }
     
-    // Logical Operators : && || !
+    // The Boolean type : true = 1 & false = 0
+    bool isElementary = ((age >= 12) && (age <= 13));
     
-    if ((age >= 12) || (age <= 13)) {
-        printf("You're in Elementary School\n");
-    }
+    printf("Is in elementary : %d\n", isElementary);
     
     return 0;
 }
