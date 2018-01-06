@@ -3,15 +3,13 @@
 #include <float.h>
 #include <stdbool.h>
 
+// A global variable can be accessed by any function
+float piVal = 3.14159265;
+
+// A static variable can be accessed by functions in the file main.c
+static float eulerConstant = .57721;
+
 int main(int argc, const char * argv[]) {
-    
-    int guess;
-    
-    // Used when you must loop once
-    do {
-        printf("Guess a number between 1 and 20 : ");
-        scanf("%d", &guess);
-    } while (guess != 15);
     
     return 0;
 }
