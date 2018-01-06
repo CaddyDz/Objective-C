@@ -3,33 +3,44 @@
 #include <float.h>
 #include <stdbool.h>
 
-// ---------- Functions -----------------
-
-void convertData(char *name, float height, float weight) {
-    name = "Caddy";
-    height = height * 12 * 2.54;
-    weight = weight * .453592;
-    printf("%s is %.1f cms tall and weighs %.2f kg\n", name, height, weight);
-}
-
-float sum(float num1, float num2) {
-    return num1 + num2;
+// If you are being passed an address use * for the attribute
+void changeNumber(int *number) {
+    
+    // You assign a value to an address by using *
+    *number = 98765;
 }
 
 int main(int argc, const char * argv[]) {
     
-    char *name = "Salim";
+    // ------- Pointers --------
+    // Data is stored in memory at addresses
+    // Memory is like a bunch of boxes and the data type used defines how many boxes you need
     
-    // Call the function name and pass values
-    convertData(name, 5.97, 123.46);
+    int randNum = 12345;
     
-    // This would cause an error because the value for height is only in the function convertData
-    // printf("%f", height);
+    // Get the address of a variable
+    printf("Location of random number : %p\n", &randNum);
     
-    // Values changed in a function don't apply outside the function (For Now)
-    printf("Name is : %s\n", name);
+    // Store the address using the same data type and *
+    int *addrRandNum = &randNum;
     
-    printf("5 + 6 = %.1f\n", sum(5, 6));
+    // Store a different value in the same location
+    *addrRandNum = 54321;
+    
+    printf("Value of random number : %d\n", *addrRandNum);
+    
+    // The memory location is the same with a new value
+    printf("Random number memory location : %p\n", &randNum);
+    
+    // Get the number of bytes for our integer
+    printf("Random number is %zu bytes in size\n", sizeof(randNum));
+    
+    // If you send the address of a var you can change its value in a function (Pass By Reference)
+    int number = 12345;
+    
+    changeNumber(&number);
+    
+    printf("New value of number is : %d\n", number);
     
     return 0;
 }
