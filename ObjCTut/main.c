@@ -5,23 +5,11 @@
 
 int main(int argc, const char * argv[]) {
     
-    // -------- Looping ----------
+    int j = 0;
     
-    for (int i = 0; i <= 10; i++) {
-        if (i == 9) {
-            
-            // break throws you out of the loop
-            break;
-        }
-        if (i == 7) {
-            // Continue skips the rest of the code in the loop
-            continue;
-        }
-        
-        // Only lets odds print because if the number is divisible by 2 you get 0 or false
-        if (i % 2) {
-            printf("i : %d\n", i);
-        }
+    while (j <= 10) {
+        printf("j : %d\n", j);
+        j++;
     }
     
     return 0;
