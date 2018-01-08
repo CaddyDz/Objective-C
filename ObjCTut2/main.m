@@ -20,6 +20,10 @@ int main(int argc, const char * argv[]) {
         
         BOOL isStringEqual = [quote isEqualToString:myName];
         printf("Are strings equal : %d\n", isStringEqual);
+        
+        const char *CSString = [[myName uppercaseString]UTF8String];
+        
+        printf("%s\n", CSString);
     }
     return 0;
 }
