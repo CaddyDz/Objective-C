@@ -46,11 +46,14 @@ int main(int argc, const char * argv[]) {
         } else {
             printf("Grey is at index %lu and is %lu long\n", searchResult.location, searchResult.length);
         }
+        
+        // Replace a substring by defining at what index to start and how many letters to replace
         NSRange range = NSMakeRange(42, 4);
         
         const char *newQuote = [[wholeQuote stringByReplacingCharactersInRange:range withString:@"Anon"]UTF8String];
         
         printf("%s\n", newQuote);
+        
     }
     return 0;
 }
