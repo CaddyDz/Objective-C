@@ -19,4 +19,13 @@
     return self;
 }
 
+// Create a custom init and add it to the header file
+-(instancetype) initWithName:(NSString*) defaultName
+{
+    self = [super init];
+    if (self) {
+        self.name = defaultName;
+    }
+    return self;
+}
 @end
