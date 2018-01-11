@@ -4,29 +4,22 @@ int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         
-        // Create a mutable string with a starting capacity of 50 characters
-        NSMutableString *groceryList = [NSMutableString stringWithCapacity:50];
+        // Create an array
+        NSArray *officeSupplies = @[@"Pensils", @"Paper"];
         
-        // Append a value to the string
-        [groceryList appendFormat:@"%s", "Potato, Banana, Pasta"];
+        NSLog(@"First item : %@", officeSupplies[0]);
         
-        NSLog(@"groceryList : %@", groceryList);
+        NSLog(@"Office Supplies : %@", officeSupplies);
         
+        // Search for item in array
+        BOOL containsItem = [officeSupplies containsObject:@"Pensils"];
         
-        // Delete characters in a range (Start, Length)
-        [groceryList deleteCharactersInRange:NSMakeRange(0,8)];
+        NSLog(@"Need pensils : %d\n", containsItem);
         
-        NSLog(@"groceryList : %@", groceryList);
+        // Number of items in array
+        NSLog(@"Total : %d\n", (int) [officeSupplies count]);
         
-        // Insert string at index
-        [groceryList insertString:@" ,Apple" atIndex:13];
-        
-        NSLog(@"groceryList : %@", groceryList);
-        
-        // Replace characters in a range
-        [groceryList replaceCharactersInRange:NSMakeRange(15, 5) withString:@"Orange"];
-        
-        NSLog(@"groceryList : %@", groceryList);
+        NSLog(@"Index of Pensils %lu", (unsigned long) [officeSupplies indexOfObject:@"Pensils"]);
     }
     return 0;
 }
