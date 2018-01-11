@@ -16,4 +16,23 @@
 // Primitive type doesn't require a *
 @property float weight;
 
+// Must define this with custom init
+-(instancetype) initWithName:(NSString*) defaultName;
+
+// Define what an object can do
+// - means it is an instance method
+// + means it is a class method and can't access instance data
+-(void) getInfo;
+
+// Returns a float and receives a float
+-(float) weightInKg:(float) weightInLbs;
+
+// If you are using objects you need pointers
+-(NSString *) talkToMe: (NSString *) myName;
+
+// Receive multiple parameters
+// nextNumber can be named anything
+-(int) getSum: (int) num1
+   nextNumber: (int) num2;
+
 @end
