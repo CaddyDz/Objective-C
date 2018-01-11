@@ -8,9 +8,13 @@
 // Define initial values for object here
 - (instancetype)init
 {
+    
+    // self refers to the instance being initialized
+    // since I don't know its defined name
+    // super is the cuperclass NSSObject init
     self = [super init];
     if (self) {
-        <#statements#>
+        self.name = @"No Name";
     }
     return self;
 }
