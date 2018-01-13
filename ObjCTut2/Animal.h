@@ -35,4 +35,7 @@
 -(int) getSum: (int) num1
    nextNumber: (int) num2;
 
+// Demonstrate dynamic binding
+-(void) makeSound;
+
 @end

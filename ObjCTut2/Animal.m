@@ -45,4 +45,10 @@
     NSString *response = [NSString stringWithFormat:@"Hello %@", myName];
     return response;
 }
+
+// Demonstrate dynamic binding
+-(void) makeSound {
+    NSLog(@"Grrrrrrrr");
+}
+
 @end

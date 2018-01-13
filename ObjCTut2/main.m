@@ -4,6 +4,7 @@
 #import "Animal.h"
 #import "Koala.h"
 #import "Animal+Exam.h"
+#import "Dog.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -89,6 +90,18 @@ int main(int argc, const char * argv[]) {
         enum Ratings matrixRating = Great;
         
         NSLog(@"Matrix Rating %u", matrixRating);
+        
+        // -------- Dynamic Binding -------------
+        Dog *grover = [[Dog alloc] initWithName:@"Grover"];
+        
+        NSArray *animals = [[NSArray alloc]initWithObjects:herbie, grover, nil];
+        
+        // An id is a pointer to any object type and yet the correct method is called automatically
+        id object1 = [animals objectAtIndex:0];
+        id object2 = [animals objectAtIndex:1];
+        
+        [object1 makeSound];
+        [object2 makeSound];
     }
     return 0;
 }
