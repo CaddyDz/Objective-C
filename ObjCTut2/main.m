@@ -75,6 +75,20 @@ int main(int argc, const char * argv[]) {
         };
         
         NSLog(@"Area of 3 width and 50 height : %.1f", getArea(3, 50));
+        
+        // ------- Enums --------
+        // Used to define a custom variable with a set of constants
+        enum Ratings {
+            Poor = 1,
+            OK = 2,
+            Average = 3,
+            Good = 4,
+            Great = 5
+        };
+        
+        enum Ratings matrixRating = Great;
+        
+        NSLog(@"Matrix Rating %u", matrixRating);
     }
     return 0;
 }
