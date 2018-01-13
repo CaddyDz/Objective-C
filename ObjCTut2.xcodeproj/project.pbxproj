@@ -33,6 +33,7 @@
 		383B4909200A83A3008580F1 /* Animal+Exam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Animal+Exam.m"; sourceTree = "<group>"; };
 		383B490B200A83FE008580F1 /* Animal+Vet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Animal+Vet.h"; sourceTree = "<group>"; };
 		383B490C200A83FE008580F1 /* Animal+Vet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Animal+Vet.m"; sourceTree = "<group>"; };
+		383B490E200A8B5C008580F1 /* BeautyContest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeautyContest.h; sourceTree = "<group>"; };
 		38A7DAAE200223F90039924C /* ObjCTut2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCTut2; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A7DAB1200223F90039924C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38C75448200766B700C1C711 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 				383B4909200A83A3008580F1 /* Animal+Exam.m */,
 				383B490B200A83FE008580F1 /* Animal+Vet.h */,
 				383B490C200A83FE008580F1 /* Animal+Vet.m */,
+				383B490E200A8B5C008580F1 /* BeautyContest.h */,
 			);
 			path = ObjCTut2;
 			sourceTree = "<group>";

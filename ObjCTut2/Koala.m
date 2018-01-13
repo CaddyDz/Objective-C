@@ -7,6 +7,10 @@
     return response;
 }
 
+-(void) lookCute {
+    NSLog(@"%@ acts super cute", self.name);
+}
+
 -(void) performTrick {
     NSLog(@"%@ performs a hand stand", self.name);
 }

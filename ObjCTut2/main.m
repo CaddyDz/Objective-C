@@ -52,6 +52,18 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Did %@ receive shots : %d", herbie.name, [herbie checkedByVet]);
         
         [herbie getShots];
+        
+        // You can also allow files to import a category and block access unless the class is a subclass using protected
+        // File > New > Objective-C file under Sources
+        // Select Category and Animal class
+        
+        [dog getInfo];
+        
+        // A protocol is a bunch of properties and methods that any class can implement
+        // File > New > Objective-C file under Sources
+        // Select Protocol -> BeautyContest
+        [herbie lookCute];
+        [herbie performTrick];
     }
     return 0;
 }
