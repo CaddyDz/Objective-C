@@ -102,6 +102,21 @@ int main(int argc, const char * argv[]) {
         
         [object1 makeSound];
         [object2 makeSound];
+        
+        // --------- Exceptions ------------------
+        /*
+         It is best to protect against possible errors and inform the user of chat happened and we do that with exception handling
+         You can find the built in exceptions here
+         developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Exceptions/Concepts/PredefinedExceptions.html#//apple_ref/doc/uid/20000057-BCIGHECA
+         */
+        NSArray *dogs = @[@"Spot", @"Bowser"];
+        
+        @try {
+            NSLog(@"%@", dogs[3]);
+        } @catch (NSException *e) {
+            NSLog(@"Exception : %@", e);
+            return 0;
+        }
     }
     return 0;
 }
