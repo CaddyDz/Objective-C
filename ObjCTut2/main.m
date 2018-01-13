@@ -1,6 +1,9 @@
 #import <Foundation/Foundation.h>
+
+// Used for classes in the project
 #import "Animal.h"
 #import "Koala.h"
+#import "Animal+Exam.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -29,7 +32,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The cats name is %@", cat.name);
         
         // Call the method weightInKg
-        NSLog(@"180 lbs = %.2f kg", [dog weightInKg:180]);  
+        NSLog(@"180 lbs = %.2f kg", [dog weightInKg:180]);
         
         // Pass attributes to be added
         NSLog(@"3 + 5 = %d", [dog getSum:3 nextNumber:5]);
@@ -42,6 +45,13 @@ int main(int argc, const char * argv[]) {
         
         // The overridden method is used
         NSLog(@"%@", [herbie talkToMe:@"Caddy"]);
+        
+        // Categories allow you to split a class into many files to keep file sizes manageable
+        // File > New > Objective-C file under Sources
+        // Select Category and Animal class
+        NSLog(@"Did %@ receive shots : %d", herbie.name, [herbie checkedByVet]);
+        
+        [herbie getShots];
     }
     return 0;
 }
