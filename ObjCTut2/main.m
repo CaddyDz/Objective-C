@@ -64,6 +64,17 @@ int main(int argc, const char * argv[]) {
         // Select Protocol -> BeautyContest
         [herbie lookCute];
         [herbie performTrick];
+        
+        // A block is an anonymous function in Objective-C
+        // First you declare it
+        float (^getArea) (float height, float width);
+        
+        // Create and assign the block
+        getArea = ^float (float width, float height) {
+            return width * height;
+        };
+        
+        NSLog(@"Area of 3 width and 50 height : %.1f", getArea(3, 50));
     }
     return 0;
 }
