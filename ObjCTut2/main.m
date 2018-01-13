@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "Animal.h"
+#import "Koala.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -28,13 +29,19 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The cats name is %@", cat.name);
         
         // Call the method weightInKg
-        NSLog(@"180 lbs = %.2f kg", [dog weightInKg:180]);
+        NSLog(@"180 lbs = %.2f kg", [dog weightInKg:180]);  
         
         // Pass attributes to be added
         NSLog(@"3 + 5 = %d", [dog getSum:3 nextNumber:5]);
         
         // Pass in an NSString
         NSLog(@"%@", [dog talkToMe:@"Derek"]);
+        
+        // Create a Koala that inherits from Animal
+        Koala *herbie = [[Koala alloc] initWithName:@"Herbie"];
+        
+        // The overridden method is used
+        NSLog(@"%@", [herbie talkToMe:@"Caddy"]);
     }
     return 0;
 }
