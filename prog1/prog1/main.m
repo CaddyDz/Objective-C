@@ -1,15 +1,28 @@
+// Wrong Syntax
+/*
 #import <Foundation/Foundation.h>
+int main (int argc, const char *argv[]);
+(
+   @autoreleasepool {
+       INT sum;
+       /* COMPUTE RESULT //
+       sum = 25 + 37 - 19
+       / DISPLAY RESULTS /
+       NSLog (@'The answer is %i' sum);
+    }
+    return 0;
+ }
+*/
 
-int main(int argc, const char * argv[]) {
+// Correct syntax
+#import <Foundation/Foundation.h>
+int main (int argc, const char * argv[]) {
     @autoreleasepool {
-        int value1, value2, result;
-        
-        value1 = 87;
-        value2 = 15;
-        
-        result = value1 - value2;
-        
-        NSLog(@"%i - %i = %i", value1, value2, result);
+        int sum;
+        /* Compute result */
+        sum = 25 + 37 - 19;
+        /* Display results */
+        NSLog(@"The answer is %i", sum);
     }
     return 0;
 }
