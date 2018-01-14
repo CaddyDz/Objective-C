@@ -2,17 +2,14 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int i = 1;
-        NSLog(@"Testing...");
-        NSLog(@"....%i", i);
-        NSLog(@"...%i", i + 1);
-        NSLog(@"..%i", i + 2);
+        int value1, value2, result;
+        
+        value1 = 87;
+        value2 = 15;
+        
+        result = value1 - value2;
+        
+        NSLog(@"%i - %i = %i", value1, value2, result);
     }
     return 0;
-    /* Expected Output
-     Testing...
-     ....1
-     ...2
-     ..3
-    */
 }
