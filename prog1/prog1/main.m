@@ -2,7 +2,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"Programming is fun!");
+        int value1, value2, sum;
+        
+        value1 = 50;
+        
+        value2 = 25;
+        
+        sum = value1 + value2;
+        
+        NSLog(@"Sum of %i and %i is %i",value1, value2, sum);
     }
     return 0;
 }
