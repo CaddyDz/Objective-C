@@ -2,7 +2,17 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"\nIn Objective-C, lowercase letters are significant.\nmain is where program execution begins.\nOpen and closed braces enclose program statements in a routine.\nAll program statements must be terminated by a semicolon.");
+        int i = 1;
+        NSLog(@"Testing...");
+        NSLog(@"....%i", i);
+        NSLog(@"...%i", i + 1);
+        NSLog(@"..%i", i + 2);
     }
     return 0;
+    /* Expected Output
+     Testing...
+     ....1
+     ...2
+     ..3
+    */
 }
