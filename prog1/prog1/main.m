@@ -1,4 +1,4 @@
-// Program to work with fractiosn - cont'd
+// program to access instance variable - cont'd
 
 #import <Foundation/Foundation.h>
 
@@ -9,6 +9,8 @@
 -(void) print;
 -(void) setNumerator: (int) n;
 -(void) setDenominator: (int) d;
+-(int) numerator;
+-(int) denominator;
 
 @end
 
@@ -35,6 +37,16 @@
     denominator = d;
 }
 
+-(int) numerator
+{
+    return numerator;
+}
+
+-(int) denominator
+{
+    return denominator;
+}
+
 @end
 
 // ---- program section ----
@@ -42,28 +54,16 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        Fraction *frac1 = [[Fraction alloc] init];
-        Fraction *frac2 = [[Fraction alloc] init];
+        Fraction *myFraction = [[Fraction alloc] init];
         
-        // Set 1st fraction to 2/3
+        // Set fraction to 1/3
         
-        [frac1 setNumerator:2];
-        [frac1 setDenominator:3];
+        [myFraction setNumerator:1];
+        [myFraction setDenominator:3];
         
-        // Set 2nd fraction to 3/7
+        // Display the fraction using our two new methods
         
-        [frac2 setNumerator:3];
-        [frac2 setDenominator:7];
-        
-        // Display the fractions
-        
-        NSLog(@"First fraction is:");
-        
-        [frac1 print];
-        
-        NSLog(@"Second fraction is:");
-        
-        [frac2 print];
+        NSLog(@"The value of myFraction is: %i/%i", [myFraction numerator], [myFraction denominator]);
     }
     return 0;
 }
