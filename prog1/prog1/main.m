@@ -1,4 +1,5 @@
-// Simple program to work with fractions - class version
+// Program to work with fractiosn - cont'd
+
 #import <Foundation/Foundation.h>
 
 // ---- @interface section ----
@@ -18,17 +19,18 @@
     int numerator;
     int denominator;
 }
+
 -(void) print
 {
     NSLog(@"%i/%i", numerator, denominator);
 }
 
--(void) setNumerator: (int) n
+-(void) setNumerator:(int)n
 {
     numerator = n;
 }
 
--(void) setDenominator: (int) d
+-(void) setDenominator:(int)d
 {
     denominator = d;
 }
@@ -37,25 +39,31 @@
 
 // ---- program section ----
 
-int main (int argc, const char *argv[]) {
-    
+int main(int argc, char * argv[])
+{
     @autoreleasepool {
-        Fraction *myFraction;
-        // Create an instance of a Fraction
+        Fraction *frac1 = [[Fraction alloc] init];
+        Fraction *frac2 = [[Fraction alloc] init];
         
-        myFraction = [Fraction alloc];
-        myFraction = [myFraction init];
+        // Set 1st fraction to 2/3
         
-        // Set fraction to 1/3
+        [frac1 setNumerator:2];
+        [frac1 setDenominator:3];
         
-        [myFraction setNumerator:1];
-        [myFraction setDenominator:3];
+        // Set 2nd fraction to 3/7
         
-        // Display the fraction using the print method
+        [frac2 setNumerator:3];
+        [frac2 setDenominator:7];
         
-        printf("The value of myFraction is:");
-        [myFraction print];
+        // Display the fractions
+        
+        NSLog(@"First fraction is:");
+        
+        [frac1 print];
+        
+        NSLog(@"Second fraction is:");
+        
+        [frac2 print];
     }
-    
     return 0;
 }
