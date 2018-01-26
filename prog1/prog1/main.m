@@ -1,69 +1,14 @@
-// program to access instance variable - cont'd
+// Excercise
 
-#import <Foundation/Foundation.h>
-
-// ---- @interface section ----
-
-@interface Fraction : NSObject
-
--(void) print;
--(void) setNumerator: (int) n;
--(void) setDenominator: (int) d;
--(int) numerator;
--(int) denominator;
-
-@end
-
-// ---- @implementation section ----
-
-@implementation Fraction
-{
-    int numerator;
-    int denominator;
-}
-
--(void) print
-{
-    NSLog(@"%i/%i", numerator, denominator);
-}
-
--(void) setNumerator:(int)n
-{
-    numerator = n;
-}
-
--(void) setDenominator:(int)d
-{
-    denominator = d;
-}
-
--(int) numerator
-{
-    return numerator;
-}
-
--(int) denominator
-{
-    return denominator;
-}
-
-@end
-
-// ---- program section ----
-
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        Fraction *myFraction = [[Fraction alloc] init];
-        
-        // Set fraction to 1/3
-        
-        [myFraction setNumerator:1];
-        [myFraction setDenominator:3];
-        
-        // Display the fraction using our two new methods
-        
-        NSLog(@"The value of myFraction is: %i/%i", [myFraction numerator], [myFraction denominator]);
-    }
-    return 0;
-}
+int Int = 1; // Valid because the reserved keyword is "int" and Objective C is case sensitive
+int _calloc = 1; // Valid because it starts with an underscore
+int clearScreen = 1; // Valid because it uses camelCase
+int ReInitialize = 1; // Valid because it uses PascalCase
+int playNextSong = 1; // Valid because is uses camelCase
+int Xx = 1; // Valid because it uses PascalCase
+int _1312 = 1; // Valid because it starts with an underscore
+int _ = 1; // Valid because it starts with an underscore
+int 6_05 = 1; // Invalid because it starts with a digit
+int alphaBetaRoutine = 1; // Valid because it uses camelCase
+int z = 1; // Valid because it uses a character
+int A$ = 1; // Valid because it starts with a legal character
