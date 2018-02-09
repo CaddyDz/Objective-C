@@ -1,28 +1,18 @@
-// Illustrate the use of various arithmetic operators
+// More arithmetic expressions
+
 #import <Foundation/Foundation.h>
 
-int main(int argc, char *argv[])
+int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int a = 100;
+        int a = 25;
         int b = 2;
-        int c = 25;
-        int d = 4;
-        int result;
+        float c = 25.0;
+        float d = 2.0;
         
-        result = a - b; // substraction
-        NSLog(@"a - b = %i", result);
-        
-        result = b * c; // multiplication
-        NSLog(@"b * c = %i", result);
-        
-        result = a / c; // division
-        NSLog(@"a / c = %i", result);
-        
-        result = a + b * c; // precedence
-        NSLog(@"a + c * c = %i", result);
-        
-        NSLog(@"a * b + c * d = %i", a * b + c * d);
+        NSLog(@"6 + a / 5 * b = %i", 6 + a / 5 * b);
+        NSLog(@"a / b * b = %i", a / b * b);
+        NSLog(@"c / d * d = %f", c / d * d);
+        NSLog(@"-a = %i", -a);
     }
-    return 0;
 }
