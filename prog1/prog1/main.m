@@ -1,16 +1,27 @@
-// The modulus operator
+// BAsic conversions in Objective-C
 
 #import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int a = 25, b = 5, c = 10, d = 7;
+        float f1 = 123.125, f2;
+        int i1, i2 = -150;
         
-        NSLog(@"a %% b = %i", a % b);
-        NSLog(@"a %% c = %i", a % c);
-        NSLog(@"a %% d = %i", a % d);
-        NSLog(@"a / d * d + a %% d = %i", a / d * d + a % d);
+        i1 = f1; // floating to integer conversion
+        NSLog(@"%f assigned to an int produces %i", f1, i1);
+        
+        f1 = i2; // integer to floating conversion
+        NSLog(@"%i assigned to a float produces %f", i2, f1);
+        
+        f1 = i2 / 100; // integer divided by integer
+        NSLog(@"%i divided by 100 produces %f", i2, f1);
+        
+        f2 = i2 / 100.0; // integer divided by a float
+        NSLog(@"%i divided by 100.O produces %f", i2, f2);
+        
+        f2 = (float) i2 / 100; // type cast operator
+        NSLog(@"(float) %i divided by 100 produces %f", i2, f2);
     }
     return 0;
 }
