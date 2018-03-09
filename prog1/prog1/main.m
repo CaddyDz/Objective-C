@@ -1,15 +1,14 @@
-// Exercise 4
+// Exercise 5
 
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        int x = 2.55;
+ 
+        int result = ((3.21 * (10 * -8)) + (2.01 * (10-7))) / ((7.16 * (10 * -6)) + (2.01 * (10 * -8)));
         
-        int result = ((x * 3) * 3) - ((x * 5) * 2) + 6;
-        
-        NSLog(@"The result is %i\n", result);
+        NSLog(@"Result is %i\n", result);
     }
     return 0;
 }
