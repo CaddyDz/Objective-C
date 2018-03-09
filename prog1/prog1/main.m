@@ -15,6 +15,11 @@
 -(double) multiply: (double) value;
 -(double) divide: (double) value;
 
+// Added methods
+-(double) changeSign; // Change sign of accumulator
+-(double) reciprocal; // 1 / Accumulator
+-(double) xSquared; // Accumulator squared
+
 @end
 
 @implementation Calculator
@@ -62,6 +67,21 @@
     return accumulator;
 }
 
+-(double) changeSign
+{
+    return -accumulator;
+}
+
+-(double) reciprocal
+{
+    return 1 / accumulator;
+}
+
+-(double) xSquared
+{
+    return accumulator * accumulator;
+}
+
 @end
 
 int main(int argc, char * argv[])
@@ -74,6 +94,9 @@ int main(int argc, char * argv[])
         [deskCalc substract: 10.0];
         [deskCalc multiply: 5];
         [deskCalc divide: 2];
+        [deskCalc changeSign];
+        [deskCalc reciprocal];
+        [deskCalc xSquared];
         NSLog(@"The result is %g", [deskCalc accumulator]);
     }
     return 0;
