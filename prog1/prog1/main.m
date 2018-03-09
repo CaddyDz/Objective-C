@@ -1,74 +1,15 @@
-// Implement a Calculator class
+// Exercise 2
 
 #import <Foundation/Foundation.h>
-
-@interface Calculator: NSObject
-
-// accumulator methods
--(void) setAccumulator: (double) value;
--(void) clear;
--(double) accumulator;
-
-// arithmetic methods
--(void) add: (double) value;
--(void) substract: (double) value;
--(void) multiply: (double) value;
--(void) divide: (double) value;
-@end
-
-@implementation Calculator
-
-{
-    double accumulator;
-}
-
--(void) setAccumulator: (double) value
-{
-    accumulator = value;
-}
-
--(void) clear
-{
-    accumulator = 0;
-}
-
--(double) accumulator
-{
-    return accumulator;
-}
-
--(void) add: (double) value
-{
-    accumulator += value;
-}
-
--(void) substract: (double) value
-{
-    accumulator -= value;
-}
-
--(void) multiply: (double) value
-{
-    accumulator *= value;
-}
-
--(void) divide: (double) value
-{
-    accumulator /= value;
-}
-@end
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        Calculator *deskCalc = [[Calculator alloc] init];
+        int value = 27;
         
-        [deskCalc setAccumulator: 100.0];
-        [deskCalc add: 200.];
-        [deskCalc divide: 15.0];
-        [deskCalc substract: 10.0];
-        [deskCalc multiply: 5];
-        NSLog(@"The result is %g", [deskCalc accumulator]);
+        int result = (value - 32) / 1.8;
+        
+        NSLog(@"27° in Fahrenheit is %i in Celcius\n", result);
     }
     return 0;
 }
