@@ -1,61 +1,62 @@
 #import <Foundation/Foundation.h>
 
-/*
- * Complex numbers are numbers that contain two components: a real part and imaginary part.
- * If a is the real component and b is the imaginary component, this notation is used to represent the number:
- * a + b i
- */
-
-/*
- * Write an Objective-C program that defines a new class called Complex.
- * Define the methods for the new class.
- * Write a test program to test the new class and its methods.
- */
-
 // ----- @interface section -----
 
-@interface Real : NSObject
+@interface Rectangle : NSObject
 
--(void) setReal: (double) a;
--(void) setImaginary: (double) b;
--(void) print; // display as a + bi
--(double) real;
--(double) imaginary;
+-(void) setWidth: (int) w;
+-(void) setHeight: (int) h;
+-(int) width;
+-(int) height;
+-(int) area;
+-(int) perimeter;
 
 @end
 
 // ----- @implementation section -----
 
-@implementation Real
+@implementation Rectangle
 
 {
-    double real;
-    double imaginary ;
+    int width;
+    int height;
 }
+
+
+-(void) setWidth: (int) w
+{
+    width = w;
+}
+
+-(void) setHeight: (int) h
+{
+    height = h;
+}
+
+-(int) width
+{
+    return width;
+}
+
+-(int) height
+{
+    return height;
+}
+
+-(int) area
+{
+    return width * height;
+}
+
+-(int) perimeter
+{
+    return (width + height) * 2;
+}
+
 
 -(void) print
 {
-    NSLog(@"%f + %f i\n", real, imaginary);
-}
-
--(void) setReal: (double) a
-{
-    real = a;
-}
-
--(void) setImaginary: (double) b
-{
-    imaginary = b;
-}
-
--(double) real
-{
-    return real;
-}
-
--(double) imaginary
-{
-    return imaginary;
+    NSLog(@"The width of the rectangle is %i and its height is %i\n", width, height);
 }
 
 @end
@@ -65,16 +66,17 @@
 int main (int argc, const char *argv[])
 {
     @autoreleasepool {
-        Real *real;
-        real = [[Real alloc] init];
+        Rectangle *rectangle;
+        rectangle = [[Rectangle alloc] init];
         
-        [real setReal:1345];
-        [real setImaginary:355];
+        [rectangle setWidth:13];
+        [rectangle setHeight:34];
         
-        [real print];
+        [rectangle print];
+        
+        NSLog(@"The area is %i\n", rectangle.area);
+        NSLog(@"The perimeter is %i\n", rectangle.perimeter);
         
     }
     return 0;
 }
-
-
