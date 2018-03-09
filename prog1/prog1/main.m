@@ -1,82 +1,80 @@
+// Implement a Calculator class
+
 #import <Foundation/Foundation.h>
 
-// ----- @interface section -----
+@interface Calculator: NSObject
 
-@interface Rectangle : NSObject
+// Accumulator methods
+-(void) setAccumulator: (double) value;
+-(void) clear;
+-(double) accumulator;
 
--(void) setWidth: (int) w;
--(void) setHeight: (int) h;
--(int) width;
--(int) height;
--(int) area;
--(int) perimeter;
-
-@end
-
-// ----- @implementation section -----
-
-@implementation Rectangle
-
-{
-    int width;
-    int height;
-}
-
-
--(void) setWidth: (int) w
-{
-    width = w;
-}
-
--(void) setHeight: (int) h
-{
-    height = h;
-}
-
--(int) width
-{
-    return width;
-}
-
--(int) height
-{
-    return height;
-}
-
--(int) area
-{
-    return width * height;
-}
-
--(int) perimeter
-{
-    return (width + height) * 2;
-}
-
-
--(void) print
-{
-    NSLog(@"The width of the rectangle is %i and its height is %i\n", width, height);
-}
+// Arithmetic methods
+-(double) add: (double) value;
+-(double) substract: (double) value;
+-(double) multiply: (double) value;
+-(double) divide: (double) value;
 
 @end
 
-// ----- Program section -----
+@implementation Calculator
 
-int main (int argc, const char *argv[])
+{
+    double accumulator;
+}
+
+-(void) setAccumulator: (double) value
+{
+    accumulator = value;
+}
+
+-(void) clear
+{
+    accumulator = 0;
+}
+
+-(double) accumulator
+{
+    return accumulator;
+}
+
+-(double) add: (double) value
+{
+    accumulator += value;
+    return accumulator;
+}
+
+-(double) substract: (double) value
+{
+    accumulator -= value;
+    return accumulator;
+}
+
+-(double) multiply: (double) value
+{
+    accumulator *= value;
+    return accumulator;
+}
+
+-(double) divide: (double) value
+{
+    accumulator /= value;
+    return accumulator;
+}
+
+@end
+
+int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        Rectangle *rectangle;
-        rectangle = [[Rectangle alloc] init];
+        Calculator *deskCalc = [[Calculator alloc] init];
         
-        [rectangle setWidth:13];
-        [rectangle setHeight:34];
-        
-        [rectangle print];
-        
-        NSLog(@"The area is %i\n", rectangle.area);
-        NSLog(@"The perimeter is %i\n", rectangle.perimeter);
-        
+        [deskCalc setAccumulator: 100.0];
+        [deskCalc add: 200.];
+        [deskCalc substract: 10.0];
+        [deskCalc multiply: 5];
+        [deskCalc divide: 2];
+        NSLog(@"The result is %g", [deskCalc accumulator]);
     }
     return 0;
 }
