@@ -1,17 +1,15 @@
-// Exercise 3
+// Exercise 4
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, char * argv[])
+int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        char c, d;
+        int x = 2.55;
         
-        c = 'd';
-        d = c;
-        NSLog(@"d = %c", d);
+        int result = ((x * 3) * 3) - ((x * 5) * 2) + 6;
+        
+        NSLog(@"The result is %i\n", result);
     }
     return 0;
 }
-
-// Expected output 'd = d'
