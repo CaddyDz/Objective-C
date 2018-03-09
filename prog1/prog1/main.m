@@ -1,27 +1,74 @@
-// Basic conversions in Objective-C
+// Implement a Calculator class
 
 #import <Foundation/Foundation.h>
+
+@interface Calculator: NSObject
+
+// accumulator methods
+-(void) setAccumulator: (double) value;
+-(void) clear;
+-(double) accumulator;
+
+// arithmetic methods
+-(void) add: (double) value;
+-(void) substract: (double) value;
+-(void) multiply: (double) value;
+-(void) divide: (double) value;
+@end
+
+@implementation Calculator
+
+{
+    double accumulator;
+}
+
+-(void) setAccumulator: (double) value
+{
+    accumulator = value;
+}
+
+-(void) clear
+{
+    accumulator = 0;
+}
+
+-(double) accumulator
+{
+    return accumulator;
+}
+
+-(void) add: (double) value
+{
+    accumulator += value;
+}
+
+-(void) substract: (double) value
+{
+    accumulator -= value;
+}
+
+-(void) multiply: (double) value
+{
+    accumulator *= value;
+}
+
+-(void) divide: (double) value
+{
+    accumulator /= value;
+}
+@end
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        float f1 = 123.125, f2;
-        int i1, i2 = -150;
+        Calculator *deskCalc = [[Calculator alloc] init];
         
-        i1 = f1; // floating to integer conversion
-        NSLog(@"%f assigned to an int produces %i", f1, i1);
-        
-        f1 = i2; // integer to floating conversion
-        NSLog(@"%i assigned to a float produces %f", i2, f1);
-        
-        f1 = i2 / 100; // integer divided by integer
-        NSLog(@"%i divided by 100 produces %f", i2, f1);
-        
-        f2 = i2 / 100.0; // integer divided by a float
-        NSLog(@"%i divided by 100.O produces %f", i2, f2);
-        
-        f2 = (float) i2 / 100; // type cast operator
-        NSLog(@"(float) %i divided by 100 produces %f", i2, f2);
+        [deskCalc setAccumulator: 100.0];
+        [deskCalc add: 200.];
+        [deskCalc divide: 15.0];
+        [deskCalc substract: 10.0];
+        [deskCalc multiply: 5];
+        NSLog(@"The result is %g", [deskCalc accumulator]);
     }
     return 0;
 }
