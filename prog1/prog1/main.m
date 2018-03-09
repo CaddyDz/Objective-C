@@ -1,15 +1,17 @@
-// Exercise 2
+// Exercise 3
 
 #import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int value = 27;
+        char c, d;
         
-        int result = (value - 32) / 1.8;
-        
-        NSLog(@"27° in Fahrenheit is %i in Celcius\n", result);
+        c = 'd';
+        d = c;
+        NSLog(@"d = %c", d);
     }
     return 0;
 }
+
+// Expected output 'd = d'
