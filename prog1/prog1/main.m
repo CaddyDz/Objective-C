@@ -1,15 +1,18 @@
-#import <Foundation/Foundation.h>
+// Program to calculate the 200th triangular number
+// Introduction of the for statement
 
-// Program to calculate the eighth triangular number
+#import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int triangularNumber;
+        int n, triangularNumber;
+        triangularNumber = 0;
         
-        triangularNumber = 1 + 2 + 3 + 4 + 6 + 7 + 8;
-        
-        NSLog(@"The eighth triangular number is %i", triangularNumber);
+        for (n = 1; n <= 200; n = n + 1) {
+            triangularNumber += n;
+            NSLog(@"The 200th triangular number is %i", triangularNumber);
+        }
     }
     return 0;
 }
