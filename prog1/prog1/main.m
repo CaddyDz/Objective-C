@@ -5,16 +5,17 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int n, triangularNumber;
-        NSLog(@"TABLE OF TRIANGULAR NUMBERS");
-        NSLog(@" n Sum from 1 to n");
-        NSLog(@"-- ---------------");
+        int n, number, triangularNumber;
+        
+        NSLog(@"What triangular number do you want?");
+        scanf("%i", &number);
         
         triangularNumber = 0;
         
-        for (n = 1; n <= 10; ++n) {
+        for (n = 1; n <= number; ++n) {
             triangularNumber += n;
-            NSLog(@"%2i %i", n, triangularNumber);
+            
+            NSLog(@"Triangular number %i is %i\n", number, triangularNumber);
         }
     }
     return 0;
