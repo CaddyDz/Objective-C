@@ -1,21 +1,21 @@
-// Program to generate a table of triangular numbers
-
 #import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int n, number, triangularNumber;
+        int n, number, triangularNumber, counter;
         
-        NSLog(@"What triangular number do you want?");
-        scanf("%i", &number);
-        
-        triangularNumber = 0;
-        
-        for (n = 1; n <= number; ++n) {
-            triangularNumber += n;
+        for (counter = 1; counter <= 5; ++counter) {
+            NSLog(@"What triangular number do you want?");
+            scanf("%i", &number);
             
-            NSLog(@"Triangular number %i is %i\n", number, triangularNumber);
+            triangularNumber = 0;
+            
+            for (n = 1; n <= number; ++n) {
+                triangularNumber += n;
+                
+                NSLog(@"Triangular number %i is %i\n", number, triangularNumber);
+            }
         }
     }
     return 0;
