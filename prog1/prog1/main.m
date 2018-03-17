@@ -1,24 +1,20 @@
-// Find the greatest common divisor of two nonnegative integers
+// Program to reverse the digits of a number
 
 #import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        unsigned int u, v, temp;
+        int number, right_digit;
         
-        NSLog(@"Please type in two nonnegative integers.");
+        NSLog(@"Enter your number.");
+        scanf("%i", &number);
         
-        scanf("%u%u", &u, &v);
-        
-        while (v != 0) {
-            temp = u % v;
-            u = v;
-            v = temp;
+        while (number != 0) {
+            right_digit = number % 10;
+            NSLog(@"%i", right_digit);
+            number /= 10;
         }
-        
-        NSLog(@"Their greatest common divisor is %u", u);
     }
-    
     return 0;
 }
