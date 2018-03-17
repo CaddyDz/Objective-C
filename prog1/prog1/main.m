@@ -10,11 +10,12 @@ int main(int argc, char * argv[])
         NSLog(@"Enter your number.");
         scanf("%i", &number);
         
-        while (number != 0) {
+        do {
             right_digit = number % 10;
             NSLog(@"%i", right_digit);
             number /= 10;
         }
+        while (number != 0);
     }
     return 0;
 }
