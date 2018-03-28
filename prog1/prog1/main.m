@@ -1,21 +1,18 @@
-/* Exercise 1
- * A program to generate and display a table of n and n²
- * where n is an integer ranging from 1 through 10
- */
+// Calculate the absolute value of an integer
 
 #import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
+        int number;
         
-        int n;
-        NSLog(@"TABLE OF POWER INTEGERS");
-        NSLog(@" n                n²   ");
-        NSLog(@"---           ---------");
-        for (n = 0; n <= 10; n++) {
-            NSLog(@"%2i                %i", n, n * n);
+        NSLog(@"Type in your number: ");
+        scanf("%i", &number);
+        if (number < 0) {
+            number = -number;
+            NSLog(@"The absolute value is %i", number);
         }
+        return 0;
     }
-    return 0;
 }
