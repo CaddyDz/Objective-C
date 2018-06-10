@@ -1,22 +1,84 @@
-// This program categorizes a single character that is entered from the keyboard
+// Program to evaluate simple expressions of the form number operator number
+
+// Implement a Calculator class
 
 #import <Foundation/Foundation.h>
+
+@interface Calculator: NSObject
+
+// accumulator methods
+-(void) setAccumulator: (double) value;
+-(void) clear;
+-(double) accumulator;
+
+// arithmetic methods
+-(void) add: (double) value;
+-(void) substract: (double) value;
+-(void) multiply: (double) value;
+-(void) divide: (double) value;
+@end
+
+@implementation Calculator
+{
+    double accumulator;
+}
+
+-(void) setAccumulator: (double) value
+{
+    accumulator = value;
+}
+
+-(void) clear
+{
+    accumulator = 0;
+}
+
+-(double) accumulator
+{
+    return accumulator;
+}
+
+-(void) add: (double) value
+{
+    accumulator += value;
+}
+
+-(void) substract: (double) value
+{
+    accumulator -= value;
+}
+
+-(void) multiply: (double) value
+{
+    accumulator *= value;
+}
+
+-(void) divide: (double) value
+{
+    accumulator /= value;
+}
+@end
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        char c;
+        double value1, value2;
+        char operator;
+        Calculator *deskCalc = [[Calculator alloc] init];
+        NSLog(@"Type in your expression.");
+        scanf("%lf %c %lf", &value1, &operator, &value2);
         
-        NSLog(@"Enter a single character:");
-        scanf(" %c", &c);
+        [deskCalc setAccumulator: value1];
+        if (operator == '+')
+            [deskCalc add: value2];
+        else if (operator == '-')
+            [deskCalc substract: value2];
+        else if (operator == '*')
+            [deskCalc multiply: value2];
+        else if (operator == '/')
+            [deskCalc divide: value2];
         
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-            NSLog(@"It's an alphabetic character.");
-        else if (c >= '0' && c <= '9')
-            NSLog(@"It's a digit.");
-        else
-            NSLog(@"It's a special character.");
+        NSLog(@"%.2f", [deskCalc accumulator]);
     }
-    
     return 0;
 }
