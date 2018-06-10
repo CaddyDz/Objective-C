@@ -1,92 +1,81 @@
-// Exercise 2
-
-// Implement a Calculator class
+// Exercise 3
 
 #import <Foundation/Foundation.h>
 
-@interface Calculator: NSObject
+@interface Fraction : NSObject
 
-// accumulator methods
--(void) setAccumulator: (double) value;
--(void) clear;
--(double) accumulator;
+-(void) print;
+-(void) setNumerator: (int) n;
+-(void) setDenomerator: (int) d;
+-(int) numerator;
+-(int) denominator;
+-(double) convertToNum;
 
-// arithmetic methods
--(void) add: (double) value;
--(void) substract: (double) value;
--(void) multiply: (double) value;
--(void) divide: (double) value;
 @end
 
-@implementation Calculator
+@implementation Fraction
 {
-    double accumulator;
+    int numerator;
+    int denominator;
 }
 
--(void) setAccumulator: (double) value
+-(void) print
 {
-    accumulator = value;
-}
-
--(void) clear
-{
-    accumulator = 0;
-}
-
--(double) accumulator
-{
-    return accumulator;
-}
-
--(void) add: (double) value
-{
-    accumulator += value;
-}
-
--(void) substract: (double) value
-{
-    accumulator -= value;
-}
-
--(void) multiply: (double) value
-{
-    accumulator *= value;
-}
-
--(void) divide: (double) value
-{
-    if (value != 0.0)
-        accumulator /= value;
-    else {
-        NSLog(@"Division by zero.");
-        accumulator = NAN;
+    if(denominator == 1) {
+        NSLog(@"%i", numerator);
+    } else if (numerator == 0) {
+        NSLog(@"0");
+    } else {
+        NSLog(@"%i/%i", numerator, denominator);
     }
 }
+
+-(void) setNumerator: (int) n
+{
+    numerator = n;
+}
+
+-(void) setDenomerator: (int) d
+{
+    denominator = d;
+}
+
+-(int) numerator
+{
+    return numerator;
+}
+
+-(int) denominator
+{
+    return denominator;
+}
+
+-(double) convertToNum
+{
+    if (denominator != 0) {
+        return (double) numerator / denominator;
+    } else {
+        // Not A Number
+        return NAN;
+    }
+}
+
 @end
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        double value1, value2;
-        char operator;
-        Calculator *deskCalc = [[Calculator alloc] init];
-        NSLog(@"Type in your expression.");
-        scanf("%lf %c %lf", &value1, &operator, &value2);
+        Fraction *aFraction = [[Fraction alloc] init];
+        Fraction *bFraction = [[Fraction alloc] init];
+        [aFraction setNumerator:0]; // 1st fraction is 1/4
+        [aFraction setDenomerator:1];
+        [aFraction print];
+        NSLog(@" =");
+        NSLog(@"%g", [aFraction convertToNum]);
         
-        [deskCalc setAccumulator: value1];
-        if (operator == '+') {
-            [deskCalc add: value2];
-        } else if (operator == '-') {
-            [deskCalc substract: value2];
-        } else if (operator == '*') {
-            [deskCalc multiply: value2];
-        } else if (operator == '/') {
-            [deskCalc divide: value2];
-        } else {
-            NSLog(@"Unknown operator.");
-            return 0;
-        }
-        NSLog(@"%.2f", [deskCalc accumulator]);
+        [bFraction print]; // never assigned a value
+        NSLog(@" =");
+        NSLog(@"%g", [bFraction convertToNum]);
     }
     return 0;
 }
