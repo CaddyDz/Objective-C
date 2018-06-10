@@ -1,23 +1,22 @@
-// Program to implement the sign function
+// This program categorizes a single character that is entered from the keyboard
 
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        int number, sign;
+        char c;
         
-        NSLog(@"Please type in a number: ");
-        scanf("%i", &number);
+        NSLog(@"Enter a single character:");
+        scanf(" %c", &c);
         
-        if (number < 0)
-            sign = -1;
-        else if (number == 0)
-            sign = 0;
-        else // Must be positive
-            sign = 1;
-        
-        NSLog(@"Sign = %i", sign);
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+            NSLog(@"It's an alphabetic character.");
+        else if (c >= '0' && c <= '9')
+            NSLog(@"It's a digit.");
+        else
+            NSLog(@"It's a special character.");
     }
+    
     return 0;
 }
