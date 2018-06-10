@@ -1,17 +1,20 @@
-// Program to implement the sign function
+// Exercise 1
 
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        int number, sign;
+        int val1, val2;
         
-        NSLog(@"Please type in a number: ");
-        scanf("%i", &number);
-        sign = (number < 0) ? -1 : ((number == 0) ? 0 : 1);
-        
-        NSLog(@"Sign = %i", sign);
+        NSLog(@"Please type in two numbers: ");
+        scanf("%i", &val1);
+        scanf("%i", &val2);
+        if (val1 % val2) {
+            NSLog(@"%i is not evenly divisible by %i", val1, val2);
+        } else {
+            NSLog(@"%i is evenly divisible by %i", val1, val2);
+        }
     }
     return 0;
 }
