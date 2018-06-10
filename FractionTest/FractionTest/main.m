@@ -17,10 +17,6 @@ int main(int argc, char * argv[])
         NSLog(@"=");
         
         [aFraction add: bFraction];
-        
-        // reduce the result of the addition and print the result
-        
-        [aFraction reduce];
         [aFraction print];  
     }
     return 0;
