@@ -4,11 +4,21 @@ int main(int argc, char * argv[])
 {
     @autoreleasepool {
         Fraction *aFraction = [[Fraction alloc] init];
+        Fraction *bFraction = [[Fraction alloc] init];
         
-        [aFraction setTo:100 over:200];
+        // Set two fractions to 1/4 and 1/2 and add them together
+        
+        [aFraction setTo:1 over:4];
+        [bFraction setTo:1 over:2];
+        
+        // Print the results
+        
         [aFraction print];
+        NSLog(@"+");
+        [bFraction print];
+        NSLog(@"=");
         
-        [aFraction setTo:1 over:3];
+        [aFraction add: bFraction];
         [aFraction print];  
     }
     return 0;
