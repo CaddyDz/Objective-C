@@ -1,21 +1,23 @@
-// Determine if a number is even or odd (Ver. 2)
+// This program determines if a year is a leap year
 
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        int number_to_test, remainder;
+        int year, rem_4, rem_100, rem_400;
         
-        NSLog(@"Enter your number to be tested:");
-        scanf("%i", &number_to_test);
+        NSLog(@"Enter the year to be tested:");
+        scanf("%i", &year);
         
-        remainder = number_to_test % 2;
+        rem_4 = year % 4;
+        rem_100 = year % 100;
+        rem_400 = year % 400;
         
-        if (remainder == 0)
-            NSLog(@"The number is even.");
+        if ((rem_4 == 0 && rem_100 != 0) || rem_400 == 0)
+            NSLog(@"It's a leap year.");
         else
-            NSLog(@"The number is odd.");
+            NSLog(@"Nope, it's not a leap year.");
     }
     return 0;
 }
