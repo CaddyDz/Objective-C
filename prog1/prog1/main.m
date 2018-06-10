@@ -1,24 +1,17 @@
-// Program to generate a table of prime numbers
-// Second version using BOOL type and predefined values
+// Program to implement the sign function
 
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        int p, d;
-        BOOL isPrime;
+        int number, sign;
         
-        for (p = 2; p <= 50; ++p) {
-            isPrime = YES;
-            
-            for (d = 2; d < p; ++d)
-                if (p % d == 0)
-                    isPrime = NO;
-                
-                if (isPrime == YES)
-                    NSLog(@"%i", p);
-        }
+        NSLog(@"Please type in a number: ");
+        scanf("%i", &number);
+        sign = (number < 0) ? -1 : ((number == 0) ? 0 : 1);
+        
+        NSLog(@"Sign = %i", sign);
     }
     return 0;
 }
