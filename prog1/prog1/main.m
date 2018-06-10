@@ -55,7 +55,12 @@
 
 -(void) divide: (double) value
 {
-    accumulator /= value;
+    if (value != 0.0)
+        accumulator /= value;
+    else {
+        NSLog(@"Division by zero.");
+        accumulator = NAN;
+    }
 }
 @end
 
@@ -75,12 +80,8 @@ int main (int argc, char * argv[])
             [deskCalc substract: value2];
         else if (operator == '*')
             [deskCalc multiply: value2];
-        else if (operator == '/') {
-            if (value2 == 0)
-                NSLog(@"Division by zero.");
-            else
-                [deskCalc divide: value2];
-        }
+        else if (operator == '/')
+            [deskCalc divide: value2];
         else
             NSLog(@"Unknown operator.");
         
