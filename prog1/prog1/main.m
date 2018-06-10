@@ -1,20 +1,20 @@
-// Program to determine if a number is even or odd
+// Determine if a number is even or odd (Ver. 2)
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, char * argv[])
+int main (int argc, char * argv[])
 {
     @autoreleasepool {
         int number_to_test, remainder;
         
-        NSLog(@"Enter your number to be tested: ");
+        NSLog(@"Enter your number to be tested:");
         scanf("%i", &number_to_test);
+        
         remainder = number_to_test % 2;
         
         if (remainder == 0)
             NSLog(@"The number is even.");
-        
-        if (remainder != 0)
+        else
             NSLog(@"The number is odd.");
     }
     return 0;
