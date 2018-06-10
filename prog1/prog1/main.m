@@ -1,6 +1,4 @@
-// Program to evaluate simple expressions of the form number operator number
-
-// Implement a Calculator class
+// Program to evaluate simple expressions of the form value operator value
 
 #import <Foundation/Foundation.h>
 
@@ -74,16 +72,23 @@ int main (int argc, char * argv[])
         scanf("%lf %c %lf", &value1, &operator, &value2);
         
         [deskCalc setAccumulator: value1];
-        if (operator == '+')
-            [deskCalc add: value2];
-        else if (operator == '-')
-            [deskCalc substract: value2];
-        else if (operator == '*')
-            [deskCalc multiply: value2];
-        else if (operator == '/')
-            [deskCalc divide: value2];
-        else
-            NSLog(@"Unknown operator.");
+        switch (operator) {
+            case '+':
+                [deskCalc add: value2];
+                break;
+            case '-':
+                [deskCalc substract: value2];
+                break;
+            case '*':
+                [deskCalc multiply: value2];
+                break;
+            case '/':
+                [deskCalc divide: value2];
+                break;
+            default:
+                NSLog(@"Unknown operator.");
+                break;
+        }
         
         NSLog(@"%.2f", [deskCalc accumulator]);
     }
