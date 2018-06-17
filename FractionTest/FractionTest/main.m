@@ -1,16 +1,21 @@
 #import "Rectangle.h"
-#import "Square.h"
-#import <Foundation/Foundation.h>
+#import "XYPoint.h"
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        Square *mySquare = [[Square alloc] init];
+        Rectangle *myRect = [[Rectangle alloc] init];
+        XYPoint *myPoint = [[XYPoint alloc] init];
         
-        [mySquare setSide:5];
+        [myPoint setX: 100 andY: 200];
         
-        NSLog(@"Square s = %i", [mySquare side]);
-        NSLog(@"Area = %i, Permiter = %i", [mySquare area], [mySquare permiter]);
+        [myRect setWidth:5 andHeight:8];
+        myRect.origin = myPoint;
+        
+        NSLog(@"Rectangle w = %i, h = %i", myRect.width, myRect.height);
+        NSLog(@"Origin at (%i, %i)", myRect.origin.x, myRect.origin.y);
+        
+        NSLog(@"Area = %i, Permiter = %i", [myRect area], [myRect perimeter]);
     }
     return 0;
 }
