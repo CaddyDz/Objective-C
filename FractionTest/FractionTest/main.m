@@ -1,15 +1,16 @@
 #import "Rectangle.h"
+#import "Square.h"
+#import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        Rectangle *myRect = [[Rectangle alloc] init];
+        Square *mySquare = [[Square alloc] init];
         
-        [myRect setWidth:5 andHeight:8];
+        [mySquare setSide:5];
         
-        NSLog(@"Rectangle: w = %i, h = %i", myRect.width, myRect.height);
-        NSLog(@"Area = %i, Perimeter = %i", [myRect area], [myRect permiter]);
-        
+        NSLog(@"Square s = %i", [mySquare side]);
+        NSLog(@"Area = %i, Permiter = %i", [mySquare area], [mySquare permiter]);
     }
     return 0;
 }
