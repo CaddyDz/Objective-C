@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E555C1920CD4B4A00612E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E555C1820CD4B4A00612E09 /* main.m */; };
+		4E71039B20D6AEBF000373F6 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E71039A20D6AEBF000373F6 /* Rectangle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		4E555C1520CD4B4A00612E09 /* FractionTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FractionTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E555C1820CD4B4A00612E09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E71039920D6AEBF000373F6 /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
+		4E71039A20D6AEBF000373F6 /* Rectangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				4E555C1820CD4B4A00612E09 /* main.m */,
+				4E71039920D6AEBF000373F6 /* Rectangle.h */,
+				4E71039A20D6AEBF000373F6 /* Rectangle.m */,
 			);
 			path = FractionTest;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E555C1920CD4B4A00612E09 /* main.m in Sources */,
+				4E71039B20D6AEBF000373F6 /* Rectangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
