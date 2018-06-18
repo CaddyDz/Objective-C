@@ -1,58 +1,37 @@
-#import <Foundation/Foundation.h>
+// Shared Method Names: Polymorphism
 
-// ClassA declaration and definition
+#import "Fraction.h"
+#import "Complex.h"
 
-@interface ClassA: NSObject
-{
-    int x; // Will be inherited by subclasses
-}
-
--(void) initVar;
--(void) printVar;
-@end
-////////////////////////
-@implementation ClassA
--(void) initVar
-{
-    x = 100;
-}
--(void) printVar
-{
-    NSLog(@"x = %i", x);
-}
-@end
-
-// ClassB declaration and definition
-
-@interface ClassB: ClassA
--(void) initVar;
--(void) printVar;
-@end
-/////////////////////////
-@implementation ClassB
--(void) initVar // added method
-{
-    x = 200;
-}
-
--(void) printVar
-{
-    NSLog(@"x = %i", x);
-}
-@end
-////////////////////////////
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        ClassA *a = [[ClassA alloc] init];
-        ClassB *b = [[ClassB alloc] init];
+        Fraction *f1 = [[Fraction alloc] init];
+        Fraction *f2 = [[Fraction alloc] init];
+        Fraction *fracResult;
+        Complex *c1 = [[Complex alloc] init];
+        Complex *c2 = [[Complex alloc] init];
+        Complex *compResult;
         
+        [f1 setTo: 1 over: 10];
+        [f2 setTo: 2 over: 15];
         
-        [a initVar]; // uses ClassA method
-        [a printVar]; // reveal value of x;
+        [c1 setReal: 18.0 andImaginary:2.5];
+        [c2 setReal: -5.0 andImaginary:3.2];
         
-        [b initVar]; // uses overriding ClassB method
-        [b printVar]; // reveal value of x;
+        // add and print 2 complex numbers
+        
+        [c1 print]; NSLog(@"        +"); [c2 print];
+        NSLog(@"---------");
+        compResult = [c1 add: c2];
+        [compResult print];
+        NSLog(@"\n");
+        
+        // add and print 2 fractions
+        [f1 print]; NSLog(@"   +"); [f2 print];
+        NSLog(@"----");
+        fracResult = [f1 add: f2];
+        [fracResult print];
     }
     return 0;
 }

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E27FE1520D6E6D1003E7DBA /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E27FE1420D6E6D1003E7DBA /* XYPoint.m */; };
+		4E29A92420D79CAE00BE9D39 /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E29A92320D79CAE00BE9D39 /* Complex.m */; };
+		4E29A92720D79E0F00BE9D39 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E29A92620D79E0F00BE9D39 /* Fraction.m */; };
 		4E555C1920CD4B4A00612E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E555C1820CD4B4A00612E09 /* main.m */; };
-		4E71039B20D6AEBF000373F6 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E71039A20D6AEBF000373F6 /* Rectangle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E27FE1320D6E6D1003E7DBA /* XYPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPoint.h; sourceTree = "<group>"; };
-		4E27FE1420D6E6D1003E7DBA /* XYPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPoint.m; sourceTree = "<group>"; };
+		4E29A92220D79CAE00BE9D39 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		4E29A92320D79CAE00BE9D39 /* Complex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Complex.m; sourceTree = "<group>"; };
+		4E29A92520D79E0F00BE9D39 /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		4E29A92620D79E0F00BE9D39 /* Fraction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
 		4E555C1520CD4B4A00612E09 /* FractionTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FractionTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E555C1820CD4B4A00612E09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4E71039920D6AEBF000373F6 /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
-		4E71039A20D6AEBF000373F6 /* Rectangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,10 @@
 		4E555C0C20CD4B4A00612E09 = {
 			isa = PBXGroup;
 			children = (
+				4E29A92220D79CAE00BE9D39 /* Complex.h */,
+				4E29A92320D79CAE00BE9D39 /* Complex.m */,
+				4E29A92520D79E0F00BE9D39 /* Fraction.h */,
+				4E29A92620D79E0F00BE9D39 /* Fraction.m */,
 				4E555C1720CD4B4A00612E09 /* FractionTest */,
 				4E555C1620CD4B4A00612E09 /* Products */,
 			);
@@ -64,10 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				4E555C1820CD4B4A00612E09 /* main.m */,
-				4E71039920D6AEBF000373F6 /* Rectangle.h */,
-				4E71039A20D6AEBF000373F6 /* Rectangle.m */,
-				4E27FE1320D6E6D1003E7DBA /* XYPoint.h */,
-				4E27FE1420D6E6D1003E7DBA /* XYPoint.m */,
 			);
 			path = FractionTest;
 			sourceTree = "<group>";
@@ -129,9 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E29A92420D79CAE00BE9D39 /* Complex.m in Sources */,
 				4E555C1920CD4B4A00612E09 /* main.m in Sources */,
-				4E71039B20D6AEBF000373F6 /* Rectangle.m in Sources */,
-				4E27FE1520D6E6D1003E7DBA /* XYPoint.m in Sources */,
+				4E29A92720D79E0F00BE9D39 /* Fraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
