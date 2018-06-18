@@ -1,21 +1,51 @@
-#import "Rectangle.h"
-#import "XYPoint.h"
+// Overriding Methods
 
+#import <Foundation/Foundation.h>
+
+// ClassA declaration and definition
+
+@interface ClassA: NSObject
+{
+    int x; // Will be inherited by subclasses
+}
+
+-(void) initVar;
+@end
+////////////////////////
+@implementation ClassA
+-(void) initVar
+{
+    x = 100;
+}
+@end
+
+// ClassB declaration and definition
+
+@interface ClassB: ClassA
+-(void) initVar;
+-(void) printVar;
+@end
+/////////////////////////
+@implementation ClassB
+-(void) initVar // added method
+{
+    x = 200;
+}
+
+-(void) printVar
+{
+    NSLog(@"x = %i", x);
+}
+@end
+////////////////////////////
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        Rectangle *myRect = [[Rectangle alloc] init];
-        XYPoint *myPoint = [[XYPoint alloc] init];
+        ClassB *b = [[ClassB alloc] init];
         
-        [myPoint setX: 100 andY: 200];
+        [b initVar]; // uses overriding method in B
         
-        [myRect setWidth:5 andHeight:8];
-        myRect.origin = myPoint;
-        
-        NSLog(@"Origin at (%i, %i)", myRect.origin.x, myRect.origin.y);
-        
-        [myPoint setX:50 andY:50];
-        NSLog(@"Origin at (%i, %i)", myRect.origin.x, myRect.origin.y);
+        [b printVar]; // reveal value of x;
     }
     return 0;
 }
