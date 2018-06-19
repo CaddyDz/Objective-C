@@ -1,16 +1,15 @@
-#import <Foundation/Foundation.h>
+#import "Fraction.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        NSArray *myArray = [NSArray array];
+        Fraction *a, *b;
         
-        @try {
-            [myArray objectAtIndex:2];
-        } @catch (NSException *exception) {
-            NSLog(@"Caught %@%@", exception.name, exception.reason);
-        }
-        NSLog(@"Execution continues");
+        a = [[Fraction alloc] initWith: 1 over: 3];
+        b = [[Fraction alloc] initWith: 3 over: 7];
+        
+        [a print];
+        [b print];
     }
     return 0;
 }

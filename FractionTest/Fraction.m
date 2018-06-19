@@ -65,4 +65,14 @@
     denominator /= u;
 }
 
+-(instancetype) initWith:(int)n over:(int)d
+{
+    self = [super init];
+    
+    if (self) {
+        [self setTo:n over:d];
+    }
+    return self;
+}
+
 @end
