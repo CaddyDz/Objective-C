@@ -8,7 +8,22 @@
 
 #import "Fraction.h"
 
+static int gCounter;
+
 @implementation Fraction
+
++(Fraction *) allocF
+{
+    extern int gCounter;
+    ++gCounter;
+    return [Fraction alloc];
+}
+
++(int) count
+{
+    extern int gCounter;
+    return gCounter;
+}
 
 @synthesize numerator, denominator;
 
