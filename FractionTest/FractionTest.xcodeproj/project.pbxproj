@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E555C1920CD4B4A00612E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E555C1820CD4B4A00612E09 /* main.m */; };
 		4E9750B120D8FC7600019BD0 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9750B020D8FC7600019BD0 /* Fraction.m */; };
+		4ED0B6E020DDA69800B2391E /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0B6DF20DDA69800B2391E /* Foo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		4E555C1820CD4B4A00612E09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E9750AF20D8FC7600019BD0 /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
 		4E9750B020D8FC7600019BD0 /* Fraction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		4ED0B6DE20DDA69800B2391E /* Foo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		4ED0B6DF20DDA69800B2391E /* Foo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,8 @@
 			children = (
 				4E9750AF20D8FC7600019BD0 /* Fraction.h */,
 				4E9750B020D8FC7600019BD0 /* Fraction.m */,
+				4ED0B6DE20DDA69800B2391E /* Foo.h */,
+				4ED0B6DF20DDA69800B2391E /* Foo.m */,
 				4E555C1720CD4B4A00612E09 /* FractionTest */,
 				4E555C1620CD4B4A00612E09 /* Products */,
 			);
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED0B6E020DDA69800B2391E /* Foo.m in Sources */,
 				4E555C1920CD4B4A00612E09 /* main.m in Sources */,
 				4E9750B120D8FC7600019BD0 /* Fraction.m in Sources */,
 			);

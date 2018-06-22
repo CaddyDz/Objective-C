@@ -1,15 +1,16 @@
-#import "Fraction.h"
+#import "Foo.h"
+#import <Foundation/Foundation.h>
 
-int main(int argc, char * argv[])
+int gGlobalVar = 5;
+
+int main()
 {
     @autoreleasepool {
-        Fraction *a, *b;
+        Foo *myFoo = [[Foo alloc] init];
+        NSLog(@"%i ", gGlobalVar);
         
-        a = [[Fraction alloc] initWith: 1 over: 3];
-        b = [[Fraction alloc] initWith: 3 over: 7];
-        
-        [a print];
-        [b print];
+        [myFoo setgGlobalVar: 100];
+        NSLog(@"%i", gGlobalVar);
     }
     return 0;
 }
