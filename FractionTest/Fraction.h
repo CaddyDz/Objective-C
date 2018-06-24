@@ -8,17 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+// Define the Fraction class
 @interface Fraction : NSObject
 
 @property int numerator, denominator;
 
--(void) print;
 -(void) setTo: (int) n over: (int) d;
--(double) convertToNum;
--(Fraction *) add: (Fraction *) f;
 -(void) reduce;
--(instancetype) initWith: (int) n over: (int) d;
-+(Fraction *) allocF;
-+(int) count;
+-(double) convertToNum;
+-(void) print;
 
 @end

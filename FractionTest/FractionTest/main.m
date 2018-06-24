@@ -1,16 +1,91 @@
-// Bitwise operators illustrated
+#import "Fraction.h"
 
-#import <Foundation/Foundation.h>
+@interface Fraction (MathOps)
+-(Fraction *) add: (Fraction *) f;
+-(Fraction *) mul: (Fraction *) f;
+-(Fraction *) sub: (Fraction *) f;
+-(Fraction *) div: (Fraction *) f;
+@end
+
+@implementation Fraction (MathOps)
+-(Fraction *) add: (Fraction *) f
+{
+    // To add two fraction:
+    // a/b + c/d = ((a*d) + (b*c)) / (d * b)
+    
+    Fraction *result = [[Fraction alloc] init];
+    
+    result.numerator = (self.numerator * f.denominator) + (self.denominator * f.numerator);
+    result.denominator = self.denominator * f.denominator;
+    [result reduce];
+    return result;
+}
+
+-(Fraction *) sub: (Fraction *) f
+{
+    // To sub two fractions:
+    // a/b - c/d = ((a*d) - (b*c)) / (b * d)
+    
+    Fraction *result = [[Fraction alloc] init];
+    
+    result.numerator = (self.numerator * f.denominator) - (self.denominator * f.numerator);
+    result.denominator = self.denominator * f.denominator;
+    [result reduce];
+    
+    return result;
+}
+
+-(Fraction *) mul: (Fraction *) f
+{
+    Fraction *result = [[Fraction alloc] init];
+    
+    result.numerator = self.numerator * f.numerator;
+    result.denominator = self.denominator * f.denominator;
+    [result reduce];
+    
+    return result;
+}
+
+-(Fraction *) div:(Fraction *)f
+{
+    Fraction *result = [[Fraction alloc] init];
+    result.numerator = self.numerator * f.denominator;
+    result.denominator = self.denominator * f.numerator;
+    [result reduce];
+    
+    return result;
+}
+@end
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        unsigned int w1 = 0xA0A0A0A0, w2 = 0xFFFF0000, w3 = 0x00007777;
+        Fraction *a = [[Fraction alloc] init];
+        Fraction *b = [[Fraction alloc] init];
+        Fraction *result;
         
-        NSLog(@"%x %x %x", w1 & w2, w1 | w2, w1 ^ w2);
-        NSLog(@"%x %x %x", ~w1, ~w2, ~w3);
-        NSLog(@"%x %x", w1 | w2 & w3, w1 | w2 & ~w3);
-        NSLog(@"%x %x", ~(~w1 & ~w2), ~(~w1 | ~w2));
+        [a setTo:1 over:3];
+        [b setTo:2 over:5];
+        
+        [a print]; NSLog(@" +"); [b print]; NSLog(@"-----");
+        result = [a add:b];
+        [result print];
+        NSLog(@"\n");
+        
+        [a print]; NSLog(@"  -"); [b print]; NSLog(@"-----");
+        result = [a sub: b];
+        [result print];
+        NSLog(@"\n");
+        
+        [a print]; NSLog(@"  *"); [b print]; NSLog(@"-----");
+        result = [a mul:b];
+        [result print];
+        NSLog(@"\n");
+        
+        [a print]; NSLog(@"  /"); [b print]; NSLog(@"-----");
+        result = [a div:b];
+        [result print];
+        NSLog(@"\n");
     }
     return 0;
 }
