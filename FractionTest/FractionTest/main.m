@@ -1,59 +1,16 @@
+// Bitwise operators illustrated
+
 #import <Foundation/Foundation.h>
 
-// print the number of days in a month
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        enum month {
-            january = 1,
-            february,
-            march,
-            april,
-            may,
-            june,
-            july,
-            august,
-            september,
-            october,
-            november,
-            december
-        };
-        enum month amonth;
-        int days;
+        unsigned int w1 = 0xA0A0A0A0, w2 = 0xFFFF0000, w3 = 0x00007777;
         
-        NSLog(@"Enter month number: ");
-        scanf("%i", &amonth);
-        
-        switch (amonth) {
-            case january:
-            case march:
-            case may:
-            case july:
-            case august:
-            case october:
-            case december:
-                days = 31;
-                break;
-            case april:
-            case june:
-            case september:
-            case november:
-                days = 30;
-                break;
-            case february:
-                days = 28;
-                break;
-            default:
-                NSLog(@"bad month number");
-                days = 0;
-                break;
-        }
-        if (days != 0) {
-            NSLog(@"Number of days is %i", days);
-        }
-        if (amonth == february) {
-            NSLog(@"...or 29 if it's a leap year");
-        }
+        NSLog(@"%x %x %x", w1 & w2, w1 | w2, w1 ^ w2);
+        NSLog(@"%x %x %x", ~w1, ~w2, ~w3);
+        NSLog(@"%x %x", w1 | w2 & w3, w1 | w2 & ~w3);
+        NSLog(@"%x %x", ~(~w1 & ~w2), ~(~w1 | ~w2));
     }
     return 0;
 }
