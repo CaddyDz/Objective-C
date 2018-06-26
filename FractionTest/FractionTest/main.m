@@ -3,16 +3,21 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        __block int foo = 10;
+        struct date
+        {
+            int month;
+            int day;
+            int year;
+        };
         
-        void (^printFoo)(void) =
-            ^(void) {
-                NSLog(@"foo = %i", foo);
-                foo = 20; // ** THIS LINE GENERATES A COMPILER ERROR
-            };
-        foo = 15;
-        printFoo();
-        NSLog(@"foo = %i", foo);
+        struct date today;
+        
+        today.month = 6;
+        today.day = 25;
+        today.year = 2018;
+        
+        NSLog(@"Today's date is %i/%i/%.2i.", today.day, today.month, today.year % 100);
+        
     }
     return 0;
 }
