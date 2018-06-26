@@ -3,7 +3,7 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int foo = 10;
+        __block int foo = 10;
         
         void (^printFoo)(void) =
             ^(void) {
