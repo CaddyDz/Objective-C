@@ -1,22 +1,28 @@
 #import <Foundation/Foundation.h>
 
-// Function to calculate the nth triangular number
+// This function finds the greatest common divisor of two nonnegative integer values and returns the result
 
-void calculateTriangularNumber(int n)
+int gcd(int u, int v)
 {
-    int i, triangularNumber = 0;
-    for (i = 1; i <= n; ++i) {
-        triangularNumber += i;
+    int temp;
+    while (v != 0)
+    {
+        temp = u % v;
+        u = v;
+        v = temp;
     }
-    NSLog(@"Triangular number %i is %i", n, triangularNumber);
+    return u;
 }
 
-int main(int arc, char * argv[])
+int main()
 {
     @autoreleasepool {
-        calculateTriangularNumber(10);
-        calculateTriangularNumber(20);
-        calculateTriangularNumber(50);
+        int result;
+        result = gcd(150, 35);
+        NSLog(@"The gcd of 150 and 35 is %i", result);
+        result = gcd(1026, 405);
+        NSLog(@"The gcd of 1026 and 405 is %i", result);
+        NSLog(@"The gcd of 83 and 240 is %i", gcd(83, 240));
     }
     return 0;
 }
