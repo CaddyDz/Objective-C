@@ -1,24 +1,26 @@
-// Function to sum the elements of an integer array
-
 #import <Foundation/Foundation.h>
 
-int arraySum(int array[], int n)
+void copyString(char *to, char *from)
 {
-    int sum = 0, *ptr;
-    int *arrayEnd = array + n;
-    
-    for (ptr = array; ptr < arrayEnd; ++ptr) {
-        sum += *ptr;
+    for (; *from != '\0'; ++from, ++to) {
+        *to = *from;
     }
-    return (sum);
+    *to = '\0';
 }
+
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int arraySum(int array[], int n);
-        int values[10] = { 3, 7, -9, 3, 6, -1, 7, 9, 1, -5};
-        NSLog(@"The sum is %i", arraySum(values, 10));
+        void copyString(char *to, char *from);
+        char string1[] = "A string to be copied.";
+        char string2[50];
+        
+        copyString(string2, string1);
+        NSLog(@"%s", string2);
+        
+        copyString(string2, "So is this.");
+        NSLog(@"%s", string2);
     }
     return 0;
 }
