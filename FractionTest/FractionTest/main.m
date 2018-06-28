@@ -1,27 +1,24 @@
-// Pointers as arguments to functions
+// Function to sum the elements of an integer array
 
 #import <Foundation/Foundation.h>
 
-void exchange(int *pint1, int *pint2)
+int arraySum(int array[], int n)
 {
-    int temp;
-    temp = *pint1;
-    *pint1 = *pint2;
-    *pint2 = temp;
+    int sum = 0, *ptr;
+    int *arrayEnd = array + n;
+    
+    for (ptr = array; ptr < arrayEnd; ++ptr) {
+        sum += *ptr;
+    }
+    return (sum);
 }
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        void exchange(int *pint1, int *pint2);
-        int i1 = -5, i2 = 66, *p1 = &i1, *p2 = &i2;
-        
-        NSLog(@"i1 = %i, i2 = %i", i1, i2);
-        exchange(p1, p2);
-        NSLog(@"i1 = %i, i2 = %i", i1, i2);
-        
-        exchange(&i1, &i2);
-        NSLog(@"i1 = %i, i2 = %i", i1, i2);
+        int arraySum(int array[], int n);
+        int values[10] = { 3, 7, -9, 3, 6, -1, 7, 9, 1, -5};
+        NSLog(@"The sum is %i", arraySum(values, 10));
     }
     return 0;
 }
