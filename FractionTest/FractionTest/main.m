@@ -1,13 +1,16 @@
+// Function to copy one string to another
+//              pointer version 2
+
+
 #import <Foundation/Foundation.h>
 
 void copyString(char *to, char *from)
 {
-    for (; *from != '\0'; ++from, ++to) {
-        *to = *from;
+    while (*from) {
+        *to++ = *from++;
     }
     *to = '\0';
 }
-
 
 int main(int argc, char * argv[])
 {
