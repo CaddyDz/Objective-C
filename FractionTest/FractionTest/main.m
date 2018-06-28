@@ -3,16 +3,21 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        char c = 'Q';
-        char *charPtr = &c;
+        struct date
+        {
+            int month;
+            int day;
+            int year;
+        };
         
-        NSLog(@"%c %c", c, *charPtr);
+        struct date today, *datePtr;
         
-        c = '/';
-        NSLog(@"%c %c", c, *charPtr);
+        datePtr = &today;
+        datePtr->month = 9;
+        datePtr->day = 25;
+        datePtr->year = 2014;
         
-        *charPtr = '(';
-        NSLog(@"%c %c", c, *charPtr);
+        NSLog(@"Today's date is %i/%i/%.2i.", datePtr->month, datePtr->day, datePtr->year % 100);
     }
     return 0;
 }
