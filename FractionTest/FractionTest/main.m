@@ -1,18 +1,18 @@
-// Program to illustrate pointers
-
 #import <Foundation/Foundation.h>
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        int count = 10, x;
-        int *intPtr;
+        char c = 'Q';
+        char *charPtr = &c;
         
-        intPtr = &count;
-        x = *intPtr;
+        NSLog(@"%c %c", c, *charPtr);
         
-        NSLog(@"count = %i, x = %i", count, x);
+        c = '/';
+        NSLog(@"%c %c", c, *charPtr);
         
+        *charPtr = '(';
+        NSLog(@"%c %c", c, *charPtr);
     }
     return 0;
 }
