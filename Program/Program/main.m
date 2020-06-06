@@ -14,27 +14,31 @@
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		NSNumber *myNumber, *floatNumber, *intNumber;
+
+		NSNumber *start;
+		NSNumber *end;
+		
+		NSNumber *center = @(([start longValue] + [end longValue]) / 2.0);
 		NSInteger myInt;
 		
 		// integer
 		
-		intNumber = @100;
-		myInt = [intNumber integerValue];
+		end = @100;
+		myInt = [end integerValue];
 		NSLog(@"%li", (long) myInt);
 		
 		// long value
 		
-		myNumber = @0xabcdefL;
-		NSLog(@"%lx", [myNumber longValue]);
+		center = @0xabcdefL;
+		NSLog(@"%lx", [center longValue]);
 		
-		myNumber = @'X';
-		NSLog(@"%lx", [myNumber charValue]);
+		start = @'X';
+		NSLog(@"%c", [start charValue]);
 		
 		// float value
 		
-		floatNumber = @100.0f;
-		NSLog(@"%g", [floatNumber floatValue]);
+		end = @100.0f;
+		NSLog(@"%g", [end floatValue]);
 	}
 	return 0;
 }
