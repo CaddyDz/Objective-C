@@ -3,17 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E555C1920CD4B4A00612E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E555C1820CD4B4A00612E09 /* main.m */; };
-		4E9750B120D8FC7600019BD0 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9750B020D8FC7600019BD0 /* Fraction.m */; };
-		4EE34A4720DFA852000F2E58 /* MathOps.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE34A4620DFA852000F2E58 /* MathOps.m */; };
+		0E2EEC92248BB43100255C25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2EEC91248BB43100255C25 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4E555C1320CD4B4A00612E09 /* CopyFiles */ = {
+		0E2EEC8C248BB43100255C25 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,16 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E555C1520CD4B4A00612E09 /* FractionTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FractionTest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E555C1820CD4B4A00612E09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4E9750AF20D8FC7600019BD0 /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
-		4E9750B020D8FC7600019BD0 /* Fraction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
-		4EE34A4520DFA852000F2E58 /* MathOps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathOps.h; sourceTree = "<group>"; };
-		4EE34A4620DFA852000F2E58 /* MathOps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathOps.m; sourceTree = "<group>"; };
+		0E2EEC8E248BB43100255C25 /* Program 15.1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Program 15.1"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2EEC91248BB43100255C25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E2EEC98248BC1FA00255C25 /* LogMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4E555C1220CD4B4A00612E09 /* Frameworks */ = {
+		0E2EEC8B248BB43100255C25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,102 +39,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E555C0C20CD4B4A00612E09 = {
+		0E2EEC85248BB43100255C25 = {
 			isa = PBXGroup;
 			children = (
-				4E9750AF20D8FC7600019BD0 /* Fraction.h */,
-				4E9750B020D8FC7600019BD0 /* Fraction.m */,
-				4E555C1720CD4B4A00612E09 /* FractionTest */,
-				4E555C1620CD4B4A00612E09 /* Products */,
+				0E2EEC90248BB43100255C25 /* Program 15.1 */,
+				0E2EEC8F248BB43100255C25 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4E555C1620CD4B4A00612E09 /* Products */ = {
+		0E2EEC8F248BB43100255C25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E555C1520CD4B4A00612E09 /* FractionTest */,
+				0E2EEC8E248BB43100255C25 /* Program 15.1 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E555C1720CD4B4A00612E09 /* FractionTest */ = {
+		0E2EEC90248BB43100255C25 /* Program 15.1 */ = {
 			isa = PBXGroup;
 			children = (
-				4E555C1820CD4B4A00612E09 /* main.m */,
-				4EE34A4520DFA852000F2E58 /* MathOps.h */,
-				4EE34A4620DFA852000F2E58 /* MathOps.m */,
+				0E2EEC91248BB43100255C25 /* main.m */,
+				0E2EEC98248BC1FA00255C25 /* LogMacro.h */,
 			);
-			path = FractionTest;
+			path = "Program 15.1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E555C1420CD4B4A00612E09 /* FractionTest */ = {
+		0E2EEC8D248BB43100255C25 /* Program 15.1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E555C1C20CD4B4A00612E09 /* Build configuration list for PBXNativeTarget "FractionTest" */;
+			buildConfigurationList = 0E2EEC95248BB43100255C25 /* Build configuration list for PBXNativeTarget "Program 15.1" */;
 			buildPhases = (
-				4E555C1120CD4B4A00612E09 /* Sources */,
-				4E555C1220CD4B4A00612E09 /* Frameworks */,
-				4E555C1320CD4B4A00612E09 /* CopyFiles */,
+				0E2EEC8A248BB43100255C25 /* Sources */,
+				0E2EEC8B248BB43100255C25 /* Frameworks */,
+				0E2EEC8C248BB43100255C25 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FractionTest;
-			productName = FractionTest;
-			productReference = 4E555C1520CD4B4A00612E09 /* FractionTest */;
+			name = "Program 15.1";
+			productName = "Program 15.1";
+			productReference = 0E2EEC8E248BB43100255C25 /* Program 15.1 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4E555C0D20CD4B4A00612E09 /* Project object */ = {
+		0E2EEC86248BB43100255C25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Caddy DZ";
 				TargetAttributes = {
-					4E555C1420CD4B4A00612E09 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+					0E2EEC8D248BB43100255C25 = {
+						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
-			buildConfigurationList = 4E555C1020CD4B4A00612E09 /* Build configuration list for PBXProject "FractionTest" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = 0E2EEC89248BB43100255C25 /* Build configuration list for PBXProject "Program 15.1" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 4E555C0C20CD4B4A00612E09;
-			productRefGroup = 4E555C1620CD4B4A00612E09 /* Products */;
+			mainGroup = 0E2EEC85248BB43100255C25;
+			productRefGroup = 0E2EEC8F248BB43100255C25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E555C1420CD4B4A00612E09 /* FractionTest */,
+				0E2EEC8D248BB43100255C25 /* Program 15.1 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4E555C1120CD4B4A00612E09 /* Sources */ = {
+		0E2EEC8A248BB43100255C25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E555C1920CD4B4A00612E09 /* main.m in Sources */,
-				4EE34A4720DFA852000F2E58 /* MathOps.m in Sources */,
-				4E9750B120D8FC7600019BD0 /* Fraction.m in Sources */,
+				0E2EEC92248BB43100255C25 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4E555C1A20CD4B4A00612E09 /* Debug */ = {
+		0E2EEC93248BB43100255C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -149,6 +138,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -170,7 +160,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -189,14 +178,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		4E555C1B20CD4B4A00612E09 /* Release */ = {
+		0E2EEC94248BB43100255C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,6 +196,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -227,7 +218,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -240,25 +230,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		4E555C1D20CD4B4A00612E09 /* Debug */ = {
+		0E2EEC96248BB43100255C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		4E555C1E20CD4B4A00612E09 /* Release */ = {
+		0E2EEC97248BB43100255C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -267,25 +256,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E555C1020CD4B4A00612E09 /* Build configuration list for PBXProject "FractionTest" */ = {
+		0E2EEC89248BB43100255C25 /* Build configuration list for PBXProject "Program 15.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E555C1A20CD4B4A00612E09 /* Debug */,
-				4E555C1B20CD4B4A00612E09 /* Release */,
+				0E2EEC93248BB43100255C25 /* Debug */,
+				0E2EEC94248BB43100255C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E555C1C20CD4B4A00612E09 /* Build configuration list for PBXNativeTarget "FractionTest" */ = {
+		0E2EEC95248BB43100255C25 /* Build configuration list for PBXNativeTarget "Program 15.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E555C1D20CD4B4A00612E09 /* Debug */,
-				4E555C1E20CD4B4A00612E09 /* Release */,
+				0E2EEC96248BB43100255C25 /* Debug */,
+				0E2EEC97248BB43100255C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4E555C0D20CD4B4A00612E09 /* Project object */;
+	rootObject = 0E2EEC86248BB43100255C25 /* Project object */;
 }
