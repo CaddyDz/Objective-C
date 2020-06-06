@@ -7,12 +7,34 @@
 //
 
 #import "Log.h"
+
+// Working with Literal Number Objects
+
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-	    // insert code here...
-	    NSLog(@"Hello, World!");
+		NSNumber *myNumber, *floatNumber, *intNumber;
+		NSInteger myInt;
+		
+		// integer
+		
+		intNumber = @100;
+		myInt = [intNumber integerValue];
+		NSLog(@"%li", (long) myInt);
+		
+		// long value
+		
+		myNumber = @0xabcdefL;
+		NSLog(@"%lx", [myNumber longValue]);
+		
+		myNumber = @'X';
+		NSLog(@"%lx", [myNumber charValue]);
+		
+		// float value
+		
+		floatNumber = @100.0f;
+		NSLog(@"%g", [floatNumber floatValue]);
 	}
 	return 0;
 }
